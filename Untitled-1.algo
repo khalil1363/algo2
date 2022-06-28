@@ -1,0 +1,31 @@
+PROCEDURE  Tri_Insertion (Set1 : ARRAY_OF INTEGER,n:intger)
+VAR
+   v,  i , j :intger
+BEGIN
+ for i from 1 to n-1 do  
+     v := Tab[ i ] ;  
+     j := i ;        
+      while( set1[ j-1 ] > v  and j>1)
+              set1[ j ]  := set1[ j-1 ]; 
+                j := j-1;                
+    end-while          
+     Tab[ j ] :=v;
+  END_FOR
+  end Tri_Insertion
+  ALGORITHM algorithm_name
+VAR
+  Set1 : ARRAY_OF INTEGER[N];
+  i:intger;
+  BEGIN
+    read(N);
+    FOR i FROM 0 TO N-1  DO
+    read(set1[i])
+END_FOR
+    FOR i FROM 0 TO N-1  DO
+    write(set1[i])
+    END_FOR
+Tri_Insertion(set1)
+    FOR i FROM 0 TO N-1  DO
+    write(set1[i])
+    END_FOR
+end
